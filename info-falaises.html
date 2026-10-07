@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Les caillasses - Info Falaises</title>
+  <meta name="description" content="Informations falaises et zones d'exclusion des gypaètes barbus dans le Diois / Vercors.">
+
+  <!-- Open Graph / Réseaux sociaux -->
+  <meta property="og:title" content="Les caillasses - Info Falaises">
+  <meta property="og:description" content="Informations falaises et zones d'exclusion des gypaètes barbus dans le Diois / Vercors.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/hero-diois.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+  <!-- Google Fonts: Lato -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+
+  <!-- Feuilles de style -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- En-tête du site -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-link">
+        <img src="assets/images/logo.png" alt="Logo du club" class="brand-logo">
+        <span class="brand-title">Les caillasses</span>
+      </a>
+
+      <!-- Bouton menu mobile -->
+      <button class="nav-toggle" aria-label="Menu de navigation" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Menu de navigation principal -->
+      <nav>
+        <ul class="nav-menu">
+          <li class="nav-item nav-item-dropdown">
+            <a href="index.html" class="nav-link active">
+              <span>Accueil</span>
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="index.html" class="">Accueil</a></li>
+              <li class="dropdown-item"><a href="les-cours.html" class="">Les cours</a></li>
+              <li class="dropdown-item"><a href="la-salle.html" class="">La salle</a></li>
+              <li class="dropdown-item"><a href="info-falaises.html" class="active">Info Falaises</a></li>
+              <li class="dropdown-item"><a href="autres-activites.html" class="">Autres activités</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="historique.html" class="nav-link ">Historique</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Bannière Hero spécifique à chaque page -->
+  <section class="hero-banner" style="background-image: url('assets/images/hero-diois.jpg');">
+    <div class="hero-content">
+      <h1 class="hero-title">Info Falaises</h1>
+      
+    </div>
+  </section>
+
+  <!-- Contenu principal -->
+  <main class="main-content">
+    
+
+    <p>Voici les zones d’exclusion autour des 2 nids de gypaètes barbus de la falaise sud du Vercors. Plus d’informations ici : <a href="https://www.parc-du-vercors.fr/gypaetes-barbus" target="_blank" rel="noopener">https://www.parc-du-vercors.fr/gypaetes-barbus</a></p>
+<div class="zone-alert zone-coeur">
+  <strong>Zone Cœur (en jaune cerclée de noir) :</strong> à l'intérieur de laquelle toute activité humaine est à proscrire : randonnée, escalade, parapente, chasse, etc.
+</div>
+<div class="zone-alert zone-tampon">
+  <strong>Zone Tampon (en jaune) :</strong> à l'intérieur de laquelle toute activité humaine bruyante est à proscrire : survol hélicoptères / avions, travaux mécanisés, chasse en battue, circulation de véhicules, etc.
+</div>
+<div class="umap-frame-container">
+  <iframe src="https://umap.openstreetmap.fr/fr/map/secteurs-vautours-grimpe-archiane_996067?scaleControl=false&amp;miniMap=false&amp;scrollWheelZoom=true&amp;zoomControl=true&amp;editMode=disabled&amp;moreControl=false&amp;searchControl=null&amp;tilelayersControl=null&amp;embedControl=null&amp;datalayersControl=null&amp;onLoadPanel=none&amp;captionBar=false&amp;captionMenus=false&amp;datalayers=682a1435-1b53-4876-957b-e3d724f0f2d0&amp;captionControl=null#14/44.7443/5.4825" title="Secteurs vautours et grimpe Archiane" loading="lazy"></iframe>
+</div>
+  </main>
+
+  <!-- Pied de page -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-info">
+        <strong>Les Caillasses</strong> – Club d'escalade du Diois (Die, Drôme)
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Accueil</a>
+        <a href="les-cours.html">Les cours</a>
+        <a href="la-salle.html">La salle</a>
+        <a href="info-falaises.html">Info Falaises</a>
+        <a href="autres-activites.html">Autres activités</a>
+        <a href="historique.html">Historique</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
