@@ -3,8 +3,7 @@ name: Déploiement GitHub Pages
 on:
   push:
     branches:
-      - main
-      - master
+      - gh-pages
   workflow_dispatch:
 
 permissions:
