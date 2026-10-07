@@ -3,7 +3,7 @@ name: Déploiement GitHub Pages
 on:
   push:
     branches:
-      - gh-pages
+      - site-statique
   workflow_dispatch:
 
 permissions:

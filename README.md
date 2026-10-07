@@ -93,20 +93,20 @@ Aucune installation complexe n'est nécessaire. Vous pouvez :
 
 ## 🚀 Mise en ligne sur GitHub Pages
 
-1. Créez un nouveau dépôt sur votre compte GitHub (par exemple `lescaillasses` ou `lescaillasses.github.io`).
-2. Poussez les fichiers sur votre dépôt :
+1. Si ce n'est pas déjà fait, configurez le dépôt distant :
    ```bash
-   git init
-   git add .
-   git commit -m "Site initial Les Caillasses"
-   git branch -M main
-   git remote add origin https://github.com/VOTRE_PSEUDO/NOM_DU_REPO.git
-   git push -u origin main
+   git remote add origin https://github.com/oalam/topo-caillasses.git
    ```
-3. Dans votre dépôt GitHub :
+2. Poussez la branche `site-statique` :
+   ```bash
+   git push -u origin site-statique
+   ```
+3. Dans le dépôt GitHub :
    - Allez dans **Settings** > **Pages**
-   - Sous **Build and deployment > Source**, choisissez **GitHub Actions**.
-   - Le site sera automatiquement en ligne à l'adresse fournie par GitHub !
+   - Sous **Build and deployment > Source**, choisissez **Deploy from a branch**.
+   - Sous **Branch**, sélectionnez **`site-statique`** et **/ (root)**.
+   - Cliquez sur **Save**.
+   - Le site sera en ligne à l'adresse fournie par GitHub Pages !
 
 ---
 
