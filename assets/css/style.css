@@ -111,6 +111,13 @@ img {
   letter-spacing: 0.5px;
 }
 
+/* Conteneur de navigation & actions */
+.header-nav-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 /* Menu de navigation desktop */
 .nav-menu {
   display: flex;
@@ -205,6 +212,45 @@ img {
 
 .nav-toggle:focus-visible {
   outline: 2px solid var(--accent-green);
+}
+
+/* Bouton Topo numérique (visible sur toutes les pages) */
+.btn-topo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--accent-green);
+  color: #1a1a1a;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: var(--transition);
+  box-shadow: 0 2px 8px rgba(142, 205, 4, 0.3);
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+.btn-topo:hover {
+  background-color: var(--accent-green-hover);
+  color: #000000;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(142, 205, 4, 0.45);
+}
+
+.btn-topo:active {
+  transform: translateY(0);
+}
+
+.btn-topo .topo-icon {
+  width: 17px;
+  height: 17px;
+  stroke: currentColor;
+}
+
+.nav-item-mobile-only {
+  display: none;
 }
 
 /* ==========================================================================
@@ -532,6 +578,15 @@ img {
   text-decoration: underline;
 }
 
+.footer-links a.footer-topo-link {
+  color: var(--accent-green);
+  font-weight: 700;
+}
+
+.footer-links a.footer-topo-link:hover {
+  color: var(--accent-green-hover);
+}
+
 /* ==========================================================================
    RESPONSIVE DESIGN (TABLETTES & MOBILES)
    ========================================================================== */
@@ -548,6 +603,37 @@ img {
 }
 
 @media (max-width: 768px) {
+  .header-container {
+    padding: 0 16px;
+  }
+
+  .header-nav-wrapper {
+    gap: 10px;
+  }
+
+  .btn-topo {
+    padding: 6px 12px;
+    font-size: 0.82rem;
+    gap: 6px;
+  }
+
+  .btn-topo .topo-icon {
+    width: 15px;
+    height: 15px;
+  }
+
+  .nav-item-mobile-only {
+    display: block;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .nav-link-topo {
+    color: var(--accent-green) !important;
+    font-weight: 700;
+  }
+
   .nav-toggle {
     display: block;
   }
@@ -614,5 +700,17 @@ img {
 
   .footer-links a {
     margin: 0 8px;
+  }
+}
+
+@media (max-width: 440px) {
+  .brand-title {
+    font-size: 1.05rem;
+  }
+
+  .btn-topo {
+    padding: 5px 9px;
+    font-size: 0.78rem;
+    gap: 4px;
   }
 }
