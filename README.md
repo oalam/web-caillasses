@@ -54,12 +54,12 @@ lescaillasses.org/
 
 Pour changer le texte d'une page, il suffit de modifier le fichier correspondant dans le dossier **`content/`** :
 
-- **Page d'accueil** : [`content/accueil.md`](file:///home/nemo/Documents/lescaillasses.org/content/accueil.md)
-- **Les cours** : [`content/les-cours.md`](file:///home/nemo/Documents/lescaillasses.org/content/les-cours.md)
-- **La salle** : [`content/la-salle.md`](file:///home/nemo/Documents/lescaillasses.org/content/la-salle.md)
-- **Info Falaises** : [`content/info-falaises.md`](file:///home/nemo/Documents/lescaillasses.org/content/info-falaises.md)
-- **Autres activités** : [`content/autres-activites.md`](file:///home/nemo/Documents/lescaillasses.org/content/autres-activites.md)
-- **Historique** : [`content/historique.md`](file:///home/nemo/Documents/lescaillasses.org/content/historique.md)
+- **Page d'accueil** : [`content/accueil.md`](content/accueil.md)
+- **Les cours** : [`content/les-cours.md`](content/les-cours.md)
+- **La salle** : [`content/la-salle.md`](content/la-salle.md)
+- **Info Falaises** : [`content/info-falaises.md`](content/info-falaises.md)
+- **Autres activités** : [`content/autres-activites.md`](content/autres-activites.md)
+- **Historique** : [`content/historique.md`](content/historique.md)
 
 ### Depuis l'interface web de GitHub (le plus simple) :
 1. Naviguez jusqu'au fichier désiré dans le dossier `content/`.
@@ -72,8 +72,9 @@ Pour changer le texte d'une page, il suffit de modifier le fichier correspondant
 1. Modifiez le fichier `.md` dans votre éditeur de texte favori.
 2. Ouvrez un terminal dans le dossier et lancez :
    ```bash
-   python3 build.py
+   python build.py
    ```
+   *(ou `python3 build.py` sous Linux/macOS)*
 3. Les fichiers HTML à la racine sont instantanément mis à jour.
 
 ---
@@ -82,10 +83,10 @@ Pour changer le texte d'une page, il suffit de modifier le fichier correspondant
 
 Aucune installation complexe n'est nécessaire. Vous pouvez :
 
-- Soit faire un double-clic sur [`index.html`](file:///home/nemo/Documents/lescaillasses.org/index.html) pour l'ouvrir dans votre navigateur web.
+- Soit faire un double-clic sur [`index.html`](index.html) pour l'ouvrir dans votre navigateur web.
 - Soit lancer le serveur web intégré de Python :
   ```bash
-  python3 -m http.server 8000
+  python -m http.server 8000
   ```
   Puis ouvrir dans votre navigateur : `http://localhost:8000`
 
@@ -101,11 +102,10 @@ Aucune installation complexe n'est nécessaire. Vous pouvez :
    ```bash
    git push -u origin site-statique
    ```
-3. Dans le dépôt GitHub :
+3. Dans les paramètres du dépôt GitHub :
    - Allez dans **Settings** > **Pages**
-   - Sous **Build and deployment > Source**, choisissez **Deploy from a branch**.
-   - Sous **Branch**, sélectionnez **`site-statique`** et **/ (root)**.
-   - Cliquez sur **Save**.
+   - Sous **Build and deployment > Source**, choisissez **GitHub Actions** (recommandé : le site se reconstruira automatiquement via le workflow inclus `.github/workflows/deploy.yml`).
+   - *(Méthode alternative sans workflow)* : vous pouvez aussi choisir **Deploy from a branch**, puis sélectionner la branche **`site-statique`** et le dossier **/ (root)**.
    - Le site sera en ligne à l'adresse fournie par GitHub Pages !
 
 ---

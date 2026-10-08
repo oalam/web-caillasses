@@ -9,6 +9,18 @@ import os
 import re
 import sys
 
+# Assure l'encodage UTF-8 de la console sous Windows
+if sys.stdout and hasattr(sys.stdout, 'reconfigure'):
+    try:
+        sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+    except Exception:
+        pass
+if sys.stderr and hasattr(sys.stderr, 'reconfigure'):
+    try:
+        sys.stderr.reconfigure(encoding='utf-8', errors='replace')
+    except Exception:
+        pass
+
 def parse_frontmatter(text):
     """Extrait le frontmatter YAML et le corps markdown."""
     frontmatter = {}
