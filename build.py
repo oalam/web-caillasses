@@ -119,8 +119,9 @@ def inline_format(text):
     """Formate les balises inline : gras, italique, liens."""
     # Gras : **texte**
     text = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', text)
-    # Italique : *texte*
+    # Italique : *texte* ou _texte_
     text = re.sub(r'\*(.+?)\*', r'<em>\1</em>', text)
+    text = re.sub(r'(?<!\w)_(.+?)_(?!\w)', r'<em>\1</em>', text)
     
     # Liens : [texte](url)
     def link_repl(match):
