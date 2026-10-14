@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - site-statique
+      - main
   workflow_dispatch:
 
 permissions:

@@ -96,16 +96,17 @@ Aucune installation complexe n'est nécessaire. Vous pouvez :
 
 1. Si ce n'est pas déjà fait, configurez le dépôt distant :
    ```bash
-   git remote add origin https://github.com/oalam/topo-caillasses.git
+   git remote set-url origin https://github.com/oalam/web-caillasses.git
    ```
-2. Poussez la branche `site-statique` :
+2. Poussez les branches :
    ```bash
+   git push -u origin main
    git push -u origin site-statique
    ```
 3. Dans les paramètres du dépôt GitHub :
    - Allez dans **Settings** > **Pages**
    - Sous **Build and deployment > Source**, choisissez **GitHub Actions** (recommandé : le site se reconstruira automatiquement via le workflow inclus `.github/workflows/deploy.yml`).
-   - *(Méthode alternative sans workflow)* : vous pouvez aussi choisir **Deploy from a branch**, puis sélectionner la branche **`site-statique`** et le dossier **/ (root)**.
+   - *(Méthode alternative sans workflow)* : vous pouvez aussi choisir **Deploy from a branch**, puis sélectionner la branche **`main`** (ou **`site-statique`**) et le dossier **/ (root)**.
    - Le site sera en ligne à l'adresse fournie par GitHub Pages !
 
 ---
